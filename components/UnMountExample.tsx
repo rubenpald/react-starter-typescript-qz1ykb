@@ -1,10 +1,8 @@
-import React, {
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+
+/**
+ * Ejemplo del error del actualiazado de componentes desmontados y su solucion.
+ */
 
 const Demo = () => {
   const [internalState, setInternalState] = useState<boolean>(true);
