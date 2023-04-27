@@ -1,0 +1,26 @@
+class Cat {
+  constructor() {
+    this.meow('roar', this.sound2);
+  }
+
+  public meow(a: string, callback: (s: string) => void) {
+    console.log(this);
+    callback(a);
+  }
+
+  public sound(a: string) {
+    console.log(this); // <----- THIS IS UNDEFINED
+    console.log(this.sayMeow);
+  }
+
+  public sound2 = (a: string) => {
+    console.log(this); // <----- THIS IS DEFINED
+    console.log(this.sayMeow());
+  };
+
+  public sayMeow() {
+    return 'Meow';
+  }
+}
+
+export default Cat;
